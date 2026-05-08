@@ -1,73 +1,70 @@
-# React + TypeScript + Vite
+# Consolidado de Paneles
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A dynamic and interactive dashboard visualization tool built to aggregate, filter, and explore various informational panels efficiently.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Dashboard Visualization:** Displays a grid of customizable panel cards with vital information at a glance.
+- **Filter by Pilar:** Easily categorize and filter panels based on their assigned "Pilar" (e.g., specific departments, categories, or functional areas).
+- **Search by Title/Description:** Quickly find specific panels using the search bar, which checks both the title and the detailed description.
+- **Expand View:** Click on any panel to view a modal with detailed information, full-size images, and external links for deeper insights.
+- **Responsive Design:** A fully responsive layout that works seamlessly across desktop and mobile devices.
 
-## React Compiler
+## Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This project leverages modern frontend technologies:
 
-## Expanding the ESLint configuration
+- **[React](https://react.dev/)**: For building the user interface.
+- **[TypeScript](https://www.typescriptlang.org/)**: For static type checking and enhanced developer experience.
+- **[Vite](https://vitejs.dev/)**: For lightning-fast development server and optimized build process.
+- **[TailwindCSS v4](https://tailwindcss.com/)**: For rapid, utility-first styling.
+- **[HeroUI](https://heroui.com/)**: For beautiful and accessible UI components (Cards).
+- **[Framer Motion](https://www.framer.com/motion/)**: For smooth, declarative animations.
+- **[Lucide React](https://lucide.dev/)**: For clean and customizable icons.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Getting Started
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Follow these instructions to set up and run the project locally.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Prerequisites
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Ensure you have [Node.js](https://nodejs.org/) (v18 or higher recommended) and npm installed.
+
+### Installation
+
+1. Clone the repository and navigate into the project directory.
+2. Install the dependencies:
+
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Development
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+To start the local development server with Hot Module Replacement (HMR):
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
+```
+
+### Linting
+
+To run ESLint and check for code quality and style issues:
+
+```bash
+npm run lint
+```
+
+### Building
+
+To build the project for production (compiles TypeScript and bundles via Vite):
+
+```bash
+npm run build
+```
+
+To preview the production build locally:
+
+```bash
+npm run preview
 ```
